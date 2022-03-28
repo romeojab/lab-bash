@@ -1,0 +1,759 @@
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ echo Hello!
+Hello!
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ mkdir new_dir
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ rmdir new_dir/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ ls
+exercices/  inputs/  lorem/  lorem-copy/  outputs/  readme.md  untitled.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ ls
+at.txt  at.txte  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cp sed.txt lorem-copy
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem-copy/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ ls
+dummy_file.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ ls
+at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cp sed.txt /
+LICENSE.txt        dev/               mingw64/           unins000.exe
+ReleaseNotes.html  etc/               proc/              unins000.msg
+bin/               git-bash.exe       tmp/               usr/
+cmd/               git-cmd.exe        unins000.dat
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cp sed.txt ./lorem-copy
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem-copy/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ ls
+dummy_file.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cp sed.txt ../lorem-copy/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem-copy/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ ls
+dummy_file.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cd ../lorem
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ ls
+at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ ls
+at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cp at.txt ; l
+Display all 134 possibilities? (y or n)
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cp at.txt ; lorem.txt ../lorem-copy/
+cp: missing destination file operand after 'at.txt'
+Try 'cp --help' for more information.
+bash: lorem.txt: command not found
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ at.txt ../lorem-copy/ ; lorem.txt ../lorem-copy/
+bash: at.txt: command not found
+bash: lorem.txt: command not found
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ at.txt ../lorem-copy/ ; cp lorem.txt ../lorem-copy/
+bash: at.txt: command not found
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ ls
+at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cp at.txt ../lorem-copy/ ; cp lorem.txt ../lorem-copy/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cd ../lorem-copy/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ ls
+at.txt  dummy_file.txt  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cat at.txt ; cat lorem.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ head -3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ head last -3 sed.txt
+head: invalid trailing option -- 3
+Try 'head --help' for more information.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ tail last -3 sed.txt
+tail: option used in invalid context -- 3
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ tail -3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ echo 'homo homini lupus' < sed.txt
+homo homini lupus
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ echo 'homo homini lupus' << sed.txt
+> vim sed.txt
+> ls
+> ^C
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ echo 'homo homini lupus' >> sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ tail -3 sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+homo homini lupus
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ echo '.' >> sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ tail -3 sed.txt
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+homo homini lupus
+.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ vim sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ vim sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ vim sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ vim sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ vim sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ vim sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ tail -3 sed.txt
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+homo homini lupus
+.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        at.txt
+        lorem.txt
+        sed.txt
+        ../lorem/lorem-copy
+        ../untitled.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ git add .
+warning: LF will be replaced by CRLF in lorem-copy/sed.txt.
+The file will have its original line endings in your working directory
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ git commit -m "1st commit up to and including exercise 11"
+[master 2758a67] 1st commit up to and including exercise 11
+ 3 files changed, 25 insertions(+)
+ create mode 100644 lorem-copy/at.txt
+ create mode 100644 lorem-copy/lorem.txt
+ create mode 100644 lorem-copy/sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ git log
+commit 2758a67fba08f96b7b8a4daf45b034ce7b322baf (HEAD -> master)
+Author: Romeo Jabbour <romeo.jabbour@gmail.com>
+Date:   Mon Mar 28 15:43:55 2022 +0200
+
+    1st commit up to and including exercise 11
+
+commit 689f07d292a527d60a327ab110bd91efc1370aab (origin/master, origin/HEAD)
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 16:33:52 2021 +0530
+
+    Update readme.md
+
+commit 5f799282d5aaf5e92987e2c573af9b06494162f7
+Merge: b1d8064 26408e3
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 12:01:22 2021 +0100
+
+    Merge pull request #6 from ironhack-edu/master
+
+    Update readme.md
+
+commit 26408e3c62d8375842f5cc9125f95c7e7dd16b0d
+Merge: 82f2c86 b1d8064
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 12:01:04 2021 +0100
+
+    Merge branch 'master' into master
+
+commit 82f2c86b9ff08d56984d46fd0a7e470d109629e4
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 16:27:56 2021 +0530
+
+    Update readme.md
+
+commit b1d80648c538bd02dcfecfc3347da8d7548ae11b
+Merge: ebf23f9 cf993b5
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Mon Nov 2 11:18:39 2020 +0530
+
+    Merge pull request #5 from haggarw3/master
+
+    Update readme.md
+
+commit cf993b55bddc448334423b404a9bcff0266e8162
+Author: Himanshu Aggarwal <haggarw3@asu.edu>
+Date:   Mon Nov 2 11:17:57 2020 +0530
+:
+commit 2758a67fba08f96b7b8a4daf45b034ce7b322baf (HEAD -> master)
+Author: Romeo Jabbour <romeo.jabbour@gmail.com>
+Date:   Mon Mar 28 15:43:55 2022 +0200
+
+    1st commit up to and including exercise 11
+
+commit 689f07d292a527d60a327ab110bd91efc1370aab (origin/master, origin/HEAD)
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 16:33:52 2021 +0530
+
+    Update readme.md
+
+commit 5f799282d5aaf5e92987e2c573af9b06494162f7
+Merge: b1d8064 26408e3
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 12:01:22 2021 +0100
+
+    Merge pull request #6 from ironhack-edu/master
+
+    Update readme.md
+
+commit 26408e3c62d8375842f5cc9125f95c7e7dd16b0d
+Merge: 82f2c86 b1d8064
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 12:01:04 2021 +0100
+
+    Merge branch 'master' into master
+
+commit 82f2c86b9ff08d56984d46fd0a7e470d109629e4
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 16:27:56 2021 +0530
+
+    Update readme.md
+
+commit b1d80648c538bd02dcfecfc3347da8d7548ae11b
+Merge: ebf23f9 cf993b5
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Mon Nov 2 11:18:39 2020 +0530
+
+    Merge pull request #5 from haggarw3/master
+
+    Update readme.md
+
+commit cf993b55bddc448334423b404a9bcff0266e8162
+Author: Himanshu Aggarwal <haggarw3@asu.edu>
+Date:   Mon Nov 2 11:17:57 2020 +0530
+:
+commit 2758a67fba08f96b7b8a4daf45b034ce7b322baf (HEAD -> master)
+Author: Romeo Jabbour <romeo.jabbour@gmail.com>
+Date:   Mon Mar 28 15:43:55 2022 +0200
+
+    1st commit up to and including exercise 11
+
+commit 689f07d292a527d60a327ab110bd91efc1370aab (origin/master, origin/HEAD)
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 16:33:52 2021 +0530
+
+    Update readme.md
+
+commit 5f799282d5aaf5e92987e2c573af9b06494162f7
+Merge: b1d8064 26408e3
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 12:01:22 2021 +0100
+
+    Merge pull request #6 from ironhack-edu/master
+
+    Update readme.md
+
+commit 26408e3c62d8375842f5cc9125f95c7e7dd16b0d
+Merge: 82f2c86 b1d8064
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 12:01:04 2021 +0100
+
+    Merge branch 'master' into master
+
+commit 82f2c86b9ff08d56984d46fd0a7e470d109629e4
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Tue Jan 5 16:27:56 2021 +0530
+
+    Update readme.md
+
+commit b1d80648c538bd02dcfecfc3347da8d7548ae11b
+Merge: ebf23f9 cf993b5
+Author: Ironhack Education Team <admin.education@ironhack.com>
+Date:   Mon Nov 2 11:18:39 2020 +0530
+
+    Merge pull request #5 from haggarw3/master
+
+    Update readme.md
+
+commit cf993b55bddc448334423b404a9bcff0266e8162
+Author: Himanshu Aggarwal <haggarw3@asu.edu>
+Date:   Mon Nov 2 11:17:57 2020 +0530
+:
+l
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../lorem/lorem-copy
+        ../untitled.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.65 KiB | 1.65 MiB/s, done.
+Total 6 (delta 1), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/romeojab/lab-bash.git
+   689f07d..2758a67  master -> master
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../lorem/lorem-copy
+        ../untitled.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lorem/lorem-copy
+        untitled.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git add .
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   lorem/lorem-copy
+        new file:   untitled.txt
+
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git commit -m "2nd commit up to and including exercise 11"
+[master f381081] 2nd commit up to and including exercise 11
+ 2 files changed, 9 insertions(+)
+ create mode 100644 lorem/lorem-copy
+ create mode 100644 untitled.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 398 bytes | 199.00 KiB/s, done.
+Total 4 (delta 2), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/romeojab/lab-bash.git
+   2758a67..f381081  master -> master
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd lab-bash/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git branch
+* master
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ ls
+Git-Bash.txt  exercices/  inputs/  lab-bash/  lorem/  lorem-copy/  outputs/  readme.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ ls
+at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ sed 's/et/ET/' at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ whoami
+Romeo
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ pwd
+/c/Users/Romeo/IH-Labs/lab-bash/lorem
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ ls -l
+total 17
+-rw-r--r-- 1 Romeo 197609 863 Mar 28 11:09 at.txt
+-rw-r--r-- 1 Romeo 197609 861 Mar 28 11:09 at.txte
+-rw-r--r-- 1 Romeo 197609 900 Mar 28 11:51 lorem-copy
+-rw-r--r-- 1 Romeo 197609 451 Mar 28 11:09 lorem.txt
+-rw-r--r-- 1 Romeo 197609 900 Mar 28 11:09 sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ ls *.txt
+at.txt  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ -l wc -l sed.txt
+bash: -l: command not found
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ wc -l sed.txt
+9 sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ wc sed.txt
+  9 131 900 sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ $ ls *lorem
+bash: $: command not found
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ grep -r lorem
+Binary file .git/index matches
+Git-Bash.txt:exercices/  inputs/  lorem/  lorem-copy/  outputs/  readme.md  untitled.txt
+Git-Bash.txt:$ cd lorem
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:at.txt  at.txte  lorem.txt  sed.txt
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cp sed.txt lorem-copy
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cd lorem-copy/
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:$ cd lorem
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cp sed.txt ./lorem-copy
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cd lorem-copy/
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:$ cd lorem
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cp sed.txt ../lorem-copy/
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cd lorem-copy/
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:$ cd ../lorem
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cp at.txt ; lorem.txt ../lorem-copy/
+Git-Bash.txt:bash: lorem.txt: command not found
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ at.txt ../lorem-copy/ ; lorem.txt ../lorem-copy/
+Git-Bash.txt:bash: lorem.txt: command not found
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ at.txt ../lorem-copy/ ; cp lorem.txt ../lorem-copy/
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:at.txt  at.txte  lorem-copy  lorem.txt  sed.txt
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cp at.txt ../lorem-copy/ ; cp lorem.txt ../lorem-copy/
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+Git-Bash.txt:$ cd ../lorem-copy/
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:at.txt  dummy_file.txt  lorem.txt  sed.txt
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+Git-Bash.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+Git-Bash.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:$ cat at.txt ; cat lorem.txt
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:        lorem.txt
+Git-Bash.txt:        ../lorem/lorem-copy
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:warning: LF will be replaced by CRLF in lorem-copy/sed.txt.
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt: create mode 100644 lorem-copy/at.txt
+Git-Bash.txt: create mode 100644 lorem-copy/lorem.txt
+Git-Bash.txt: create mode 100644 lorem-copy/sed.txt
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:        ../lorem/lorem-copy
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:        ../lorem/lorem-copy
+Git-Bash.txt:Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+Git-Bash.txt:        lorem/lorem-copy
+Git-Bash.txt:        new file:   lorem/lorem-copy
+Git-Bash.txt: create mode 100644 lorem/lorem-copy
+Binary file lab-bash/.git/index matches
+lab-bash/lorem/lorem-copy:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+lab-bash/lorem/lorem-copy:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+lab-bash/lorem/lorem-copy:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+lab-bash/lorem/sed.txt:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+lab-bash/lorem/sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+lab-bash/lorem/sed.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+lab-bash/lorem-copy/sed.txt:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+lab-bash/lorem-copy/sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+lab-bash/lorem-copy/sed.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+lab-bash/readme.md:exercises  inputs  lorem  lorem-copy  modules  outputs  README.md
+lab-bash/readme.md:4. Copy the file `sed.txt` from the `lorem` folder and paste it to the folder `lorem-copy` folder.
+lab-bash/readme.md:5. Copy the other two files from the `lorem folder` to `lorem-copy` folder in just one line using semicolon `;`.
+lab-bash/readme.md:6. Show the `sed.txt` file content from the `lorem` folder.
+lab-bash/readme.md:7. Show the `at.txt` file and `lorem.txt` file contents from `lorem` folder.
+lab-bash/readme.md:8. Print the first 3 rows in `sed.txt` file from lorem-copy folder.
+lab-bash/readme.md:9. Print the last 3 rows in `sed.txt` file from lorem-copy folder.
+lab-bash/readme.md:10. Add `Homo homini lupus.` at the end of `sed.txt` file in the `lorem-copy` folder.
+lab-bash/readme.md:11. Print the last 3 rows in `sed.txt` file from `lorem-copy` folder. You should see `Homo homini lupus.`.
+lab-bash/readme.md:12. `sed` command is used to replace the text in a file. Use the `sed` command to replace all occurances of `et` with `ET` in the file `at.txt` file present in the folder `lorem`. You can use the following link to refer to `sed` commands [https://www.linode.com/docs/guides/manipulate-text-from-the-command-line-with-sed/]
+lab-bash/readme.md:15. List all files with the extension `.txt` in lorem folder.
+lab-bash/readme.md:16. Count the rows in `sed.txt` file from lorem folder. Look concatenate `cat` and `wc` with the pipe `|`.
+lab-bash/readme.md:17. Count the **files** which start with `lorem` in all directories.
+lorem/lorem-copy:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+lorem/lorem-copy:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+lorem/lorem-copy:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+lorem/sed.txt:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+lorem/sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+lorem/sed.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+lorem-copy/sed.txt:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+lorem-copy/sed.txt:Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+lorem-copy/sed.txt:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+readme.md:exercises  inputs  lorem  lorem-copy  modules  outputs  README.md
+readme.md:4. Copy the file `sed.txt` from the `lorem` folder and paste it to the folder `lorem-copy` folder.
+readme.md:5. Copy the other two files from the `lorem folder` to `lorem-copy` folder in just one line using semicolon `;`.
+readme.md:6. Show the `sed.txt` file content from the `lorem` folder.
+readme.md:7. Show the `at.txt` file and `lorem.txt` file contents from `lorem` folder.
+readme.md:8. Print the first 3 rows in `sed.txt` file from lorem-copy folder.
+readme.md:9. Print the last 3 rows in `sed.txt` file from lorem-copy folder.
+readme.md:10. Add `Homo homini lupus.` at the end of `sed.txt` file in the `lorem-copy` folder.
+readme.md:11. Print the last 3 rows in `sed.txt` file from `lorem-copy` folder. You should see `Homo homini lupus.`.
+readme.md:12. `sed` command is used to replace the text in a file. Use the `sed` command to replace all occurances of `et` with `ET` in the file `at.txt` file present in the folder `lorem`. You can use the following link to refer to `sed` commands [https://www.linode.com/docs/guides/manipulate-text-from-the-command-line-with-sed/]
+readme.md:15. List all files with the extension `.txt` in lorem folder.
+readme.md:16. Count the rows in `sed.txt` file from lorem folder. Look concatenate `cat` and `wc` with the pipe `|`.
+readme.md:17. Count the **files** which start with `lorem` in all directories.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ grep -o '"' lab-bash | wc -l
+grep: lab-bash: Is a directory
+0
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ grep -o 'lorem' lab-bash | wc -l
+grep: lab-bash: Is a directory
+0
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ grep 'lorem' lab-bash | wc -l
+grep: lab-bash: Is a directory
+0
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ grep -r 'lorem' lab-bash | wc -l
+23
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cat | wc -l sed.txt
+wc: sed.txt: No such file or directory
+find . -type f -name "lorem*" | wc -l
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ find . -type f -name "lorem*" | wc -l
+6
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cat | wc -l sed.txt
+wc: sed.txt: No such file or directory
